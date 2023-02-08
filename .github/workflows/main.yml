@@ -10,7 +10,7 @@ jobs:
 
       - name: Run scan
         id: run-scan
-        uses: endorlabs/github-action@fix/ci-run-params
+        uses: endorlabs/github-action@main
         with:
           api: ${{ secrets.ENDOR_API }}
           api_key: ${{ secrets.ENDOR_API_KEY }}
