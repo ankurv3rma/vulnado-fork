@@ -17,6 +17,7 @@ jobs:
           api_secret: ${{ secrets.ENDOR_API_SECRET }}
           scan_summary_output_type: "table"
           namespace: "testing-tenant"
+          log_level: "error"
           
       # Use the output from the `scan` step
       - name: Get the output
