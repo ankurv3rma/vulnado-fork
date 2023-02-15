@@ -4,6 +4,9 @@ jobs:
   test_job:
     runs-on: ubuntu-latest
     name: A sample job
+    env:
+      # 7 GiB by default on GitHub, setting this to 16 GiB
+      NODE_OPTIONS: --max-old-space-size=16384
     steps:
       - name: Checkout
         uses: actions/checkout@v3
