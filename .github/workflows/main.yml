@@ -18,9 +18,10 @@ jobs:
           scan_summary_output_type: "json"
           namespace: "testing-tenant"
           
-      # Use the output from the `scan` step
-      - name: Get the output
-        run: echo ${{ steps.scan.outputs.result }} > ${{ github.workspace }}/result.json
+      - uses: devops-actions/json-to-file@v1.0.0
+        with:
+          json: ${{ steps.scan.outputs.result }}
+          filename: "result.json"
 
       # Upload the result as an artifact
       - name: Upload the result artifact
