@@ -15,7 +15,7 @@ jobs:
           api: ${{ secrets.ENDOR_API }}
           api_key: ${{ secrets.ENDOR_API_KEY }}
           api_secret: ${{ secrets.ENDOR_API_SECRET }}
-          scan_summary_output_type: "table"
+          scan_summary_output_type: "json"
           namespace: "testing-tenant"
           log_level: "error"
           
