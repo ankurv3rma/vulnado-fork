@@ -20,10 +20,10 @@ jobs:
           api_secret: ${{ secrets.ENDOR_API_SECRET }}
           scan_summary_output_type: "json"
           namespace: "testing-tenant"
-          additional_args: "--output-filter=low"
+#           additional_args: "--output-filter=low"
       
       - name: Print Output
-        run: echo ${{ steps.scan.outputs.result }}
+        run: echo "The result was ${{ steps.scan.outputs.result }}"
           
 #       - name: devops-actions/json-to-file@v1.0.0
 #         with:
