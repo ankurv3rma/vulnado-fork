@@ -23,31 +23,7 @@ jobs:
 #           additional_args: "--output-filter=low"
       
       - name: Print Output
-        run: echo "The result1 was ${{ steps.scan.outputs.result1 }}"
-        
-      - name: Print Output
-        run: echo "The result2 was ${{ steps.scan.outputs.result2 }}"
-        
-      - name: Print Output
-        run: echo "The result3 was ${{ steps.scan.outputs.result3 }}"
-        
-      - name: Print Output
-        run: echo "The result4 was ${{ steps.scan.outputs.result4 }}"
-        
-      - name: Print Output
         run: echo "The result5 was ${{ steps.scan.outputs.result5 }}"
-        
-      - name: Print Output
-        run: echo "The result6 was ${{ steps.scan.outputs.result6 }}"
-        
-      - name: Print Output
-        run: echo "The result7 was ${{ steps.scan.outputs.result7 }}"
-        
-      - name: Print Output
-        run: echo "The result8 was ${{ steps.scan.outputs.result8 }}"
-        
-      - name: Print Output
-        run: echo "The result9 was ${{ steps.scan.outputs.result9 }}"
       
           
 #       - name: devops-actions/json-to-file@v1.0.0
