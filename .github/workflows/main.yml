@@ -22,5 +22,4 @@ jobs:
           api_secret: ${{ secrets.ENDOR_API_SECRET }}
           scan_summary_output_type: "json"
           namespace: "testing-tenant"
-          log_verbose: true
           additional_args: "--bypass-doctor"
