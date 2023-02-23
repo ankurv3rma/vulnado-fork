@@ -2,7 +2,7 @@ on: [push, workflow_dispatch]
 
 jobs:
   test_job:
-    runs-on: macos-latest
+    runs-on: windows-latest
     name: A sample job
     steps:
       - name: Checkout
@@ -17,3 +17,4 @@ jobs:
           api_secret: ${{ secrets.ENDOR_API_SECRET }}
           scan_summary_output_type: "json"
           namespace: "testing-tenant"
+          additional_args: "--bypass-doctor"
