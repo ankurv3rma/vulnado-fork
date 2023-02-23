@@ -22,4 +22,4 @@ jobs:
           api_secret: ${{ secrets.ENDOR_API_SECRET }}
           scan_summary_output_type: "json"
           namespace: "testing-tenant"
-          additional_args: "--bypass-doctor --output-filter=[critical]"
+          additional_args: "--output-filter=[critical]"
