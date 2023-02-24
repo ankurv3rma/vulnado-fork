@@ -2,7 +2,7 @@ on: [push, workflow_dispatch]
 
 jobs:
   test_job:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     name: A sample job
     steps:
       - name: Checkout
