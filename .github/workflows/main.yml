@@ -15,7 +15,7 @@ jobs:
           
       - name: Run scan
         id: scan
-        uses: ankurv3rma/ts-action-test@main
+        uses: endorlabs/github-action@artifact
         with:
           api: ${{ secrets.ENDOR_API }}
           api_key: ${{ secrets.ENDOR_API_KEY }}
