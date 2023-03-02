@@ -20,6 +20,7 @@ jobs:
           api: ${{ secrets.ENDOR_API }}
 #           api_key: ${{ secrets.ENDOR_API_KEY }}
 #           api_secret: ${{ secrets.ENDOR_API_SECRET }}
+          gcp_service_account: "test-account"
           scan_summary_output_type: "table"
           namespace: "testing-tenant"
           additional_args: "--enable-github-action=true"
