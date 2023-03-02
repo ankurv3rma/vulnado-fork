@@ -18,7 +18,8 @@ jobs:
         uses: ankurv3rma/ts-action-test@main
         with:
           api: ${{ secrets.ENDOR_API }}
-          api_key: ${{ secrets.ENDOR_API_KEY }}
-          api_secret: ${{ secrets.ENDOR_API_SECRET }}
+#           api_key: ${{ secrets.ENDOR_API_KEY }}
+#           api_secret: ${{ secrets.ENDOR_API_SECRET }}
           scan_summary_output_type: "table"
           namespace: "testing-tenant"
+          additional_args: "--enable-github-action=true"
