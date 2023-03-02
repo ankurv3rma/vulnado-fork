@@ -2,6 +2,8 @@ on: [push, workflow_dispatch]
 
 jobs:
   test_job:
+    permissions:
+      issues: write
     runs-on: ubuntu-latest
     name: A sample job
     steps:
