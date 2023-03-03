@@ -25,4 +25,4 @@ jobs:
           gcp_service_account: "test-account"
           scan_summary_output_type: "table"
           namespace: "testing-tenant"
-          additional_args: "--enable-github-action=true"
+          additional_args: "--enable-github-action-token=true=true"
