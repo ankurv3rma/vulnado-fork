@@ -1,0 +1,27 @@
+on: [push, workflow_dispatch]
+
+jobs:
+  test_job:
+    permissions:
+      id-token: write
+    runs-on: ubuntu-latest
+    name: A sample job
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'microsoft'
+          java-version: '17'
+          
+      - name: Run scan
+        id: scan
+        uses: endorlabs/github-action@fixargs
+        with:
+          api: ${{ secrets.ENDOR_API }}
+          api_key: ${{ secrets.ENDOR_API_KEY }}
+          api_secret: ${{ secrets.ENDOR_API_SECRET }}
+          scan_summary_output_type: "table"
+          namespace: "testing-tenant"
+          additional_args: "--output-filter=medium,low --bypass-doctor"
