@@ -3,7 +3,7 @@ on: [push, workflow_dispatch]
 jobs:
   test_job:
     permissions:
-      issues: write
+      id-token: write
     runs-on: ubuntu-latest
     name: A sample job
     steps:
@@ -17,12 +17,11 @@ jobs:
           
       - name: Run scan
         id: scan
-        uses: ankurv3rma/ts-action-test@main
+        uses: endorlabs/github-action@authtoken
         with:
           api: ${{ secrets.ENDOR_API }}
 #           api_key: ${{ secrets.ENDOR_API_KEY }}
 #           api_secret: ${{ secrets.ENDOR_API_SECRET }}
-          gcp_service_account: "test-account"
           scan_summary_output_type: "table"
           namespace: "testing-tenant"
           additional_args: "--enable-github-action-token=true"
