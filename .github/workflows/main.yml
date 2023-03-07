@@ -17,7 +17,7 @@ jobs:
           
       - name: Run scan
         id: scan
-        uses: endorlabs/github-action@authtoken
+        uses: endorlabs/github-action@main
         with:
           api: ${{ secrets.ENDOR_API }}
           scan_summary_output_type: "table"
